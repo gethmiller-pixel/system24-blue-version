@@ -18,6 +18,7 @@ A TUI-style CSS theme for Discord built on top of [midnight](https://github.com/
 - `scripts/build.js` — deterministic compiler (`npm run build`); `dev.js` and `serve.js` both use it.
 - `scripts/dev.js` — rebuilds `build/system24.css`, expands the build import into each `DEV_OUTPUT_PATH`, and watches `src/` plus `theme/system24.theme.css`.
 - `scripts/serve.js` + `scripts/inject.js` + `scripts/theme-dev.user.js` — browser dev flow (`npm run serve`).
+- `scripts/screenshot-flavors.js` — captures flavor screenshots into `assets/flavors/` (plus README thumbnails in `assets/flavors/thumbs/`) by cycling each flavor through the live Vesktop theme file (`npm run screenshot`, macOS only, requires `DEV_OUTPUT_PATH`).
 - `docs/BROWSER_DEV.md` — browser injection and verification flow.
 
 ## System24 vs. midnight
@@ -32,7 +33,7 @@ A TUI-style CSS theme for Discord built on top of [midnight](https://github.com/
 - When adding or removing a source file, update the ordered `sourceFiles` list in `scripts/theme.config.js`; builds fail on an unlisted or missing CSS file.
 - Public defaults are duplicated in `src/main.css` and `theme/system24.theme.css`; keep them in sync. When adding or renaming public variables, also update every affected standalone flavor while preserving flavor-specific values.
 - `npm run dev` requires `DEV_OUTPUT_PATH` in `.env` (comma-separated paths are supported). `npm run build` and `npm run serve` do not.
-- `scripts/build.js`, `dev.js`, `serve.js`, `inject.js`, `theme-dev.user.js`, and `docs/BROWSER_DEV.md` are intentionally identical to midnight's copies. Keep theme-specific behavior in `scripts/theme.config.js` and theme ownership guidance in `AGENTS.md`.
+- `scripts/build.js`, `dev.js`, `serve.js`, `inject.js`, `screenshot-flavors.js`, `theme-dev.user.js`, and `docs/BROWSER_DEV.md` are intentionally identical to midnight's copies. Keep theme-specific behavior in `scripts/theme.config.js` and theme ownership guidance in `AGENTS.md`.
 - Don't add `!important` merely to fight specificity—tighten the selector first.
 
 ## Experimental agentic development
