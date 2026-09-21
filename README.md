@@ -4,7 +4,7 @@
 
 a customizable, tui-style discord theme. inspired by [spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text).
 
-<img src="https://raw.githubusercontent.com/refact0r/system24/main/assets/flavors/system24.png">
+<img src="https://raw.githubusercontent.com/gethmiller-pixel/system24-blue-version/main/assets/flavors/system24screenshot.png">
 
 ## install
 
