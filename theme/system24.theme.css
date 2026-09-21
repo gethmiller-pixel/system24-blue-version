@@ -50,7 +50,7 @@ body {
     --custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
     --dms-background-image-url: url(''); /* url of the background image */
     --dms-background-image-size: cover; /* size of the background image (css background-size property) */
-    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-1), var(--blue-3), var(--blue-5)); /* fixed color/gradient (css background property) */
 
     /* background image options */
     --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
@@ -68,8 +68,8 @@ body {
     --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
 
     /* unrounding options */
-    --unrounding: on; /* off: default, on: remove rounded corners from panels */
-    --round-pfp: off; /* off: square profile pictures, on: rounded profile pictures (Discord default) */
+    --unrounding: off; /* off: rounded panel corners, on: square panel corners */
+    --round-pfp: on; /* off: square profile pictures, on: rounded profile pictures */
     --remove-pfp-decor: off; /* off: default, on: remove profile picture decorations */
 
     /* styling options */
@@ -105,29 +105,29 @@ body {
     --active-2: oklch(54% 0 0 / 0.3); /* extra state for transparent buttons */
     --message-hover: var(--hover); /* messages when hovered */
 
-    /* accent colors */
-    --accent-1: var(--purple-1); /* links and other accent text */
-    --accent-2: var(--purple-2); /* small accent elements */
-    --accent-3: var(--purple-3); /* accent buttons */
-    --accent-4: var(--purple-4); /* accent buttons when hovered */
-    --accent-5: var(--purple-5); /* accent buttons when clicked */
-    --accent-new: var(--red-2); /* stuff that's normally red like mute/deafen buttons */
-    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
-    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
-    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
-    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+    /* accent colors - gradient from light blue (1) to deeper blue (5) */
+    --accent-1: var(--blue-1); /* links and accent text (lightest blue) */
+    --accent-2: var(--blue-2); /* small accent elements */
+    --accent-3: var(--blue-3); /* accent buttons */
+    --accent-4: var(--blue-4); /* accent buttons when hovered */
+    --accent-5: var(--blue-5); /* accent buttons when clicked (deep blue) */
+    --accent-new: var(--blue-1); /* primary highlight accent */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-1), transparent 90%) 40%, transparent); /* message mention gradient */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-1), transparent 95%) 40%, transparent); /* message mention hover gradient */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* reply gradient */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* reply hover gradient */
 
     /* status indicator colors */
     --online: var(--green-2); /* change to #40a258 for default */
     --dnd: var(--red-2); /* change to #d83a41 for default */
     --idle: var(--yellow-2); /* change to #cc954c for default */
-    --streaming: var(--purple-2); /* change to ##9147ff for default */
+    --streaming: var(--blue-2); /* change to ##9147ff for default */
     --offline: var(--text-4); /* change to #82838b for default offline color */
 
     /* border colors */
     --border-light: var(--hover); /* general light border color */
     --border: var(--active); /* general normal border color */
-    --border-hover: var(--accent-2); /* border color of panels when hovered */
+    --border-hover: var(--accent-1); /* border color of panels when hovered */
     --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
 
     /* base colors */
@@ -143,17 +143,17 @@ body {
     --green-4: oklch(60% 0.12 170);
     --green-5: oklch(55% 0.12 160);
 
-    --blue-1: oklch(75% 0.11 215);
-    --blue-2: oklch(70% 0.11 215);
-    --blue-3: oklch(65% 0.11 215);
-    --blue-4: oklch(60% 0.11 215);
-    --blue-5: oklch(55% 0.11 215);
+    --blue-1: oklch(82% 0.11 215); /* light blue */
+    --blue-2: oklch(75% 0.11 215);
+    --blue-3: oklch(68% 0.11 215);
+    --blue-4: oklch(61% 0.11 215);
+    --blue-5: oklch(54% 0.11 215); /* deep blue */
 
     --yellow-1: oklch(80% 0.12 90);
     --yellow-2: oklch(75% 0.12 90);
     --yellow-3: oklch(70% 0.12 90);
     --yellow-4: oklch(65% 0.12 90);
-    --yellow-5: oklch(60% 0.12 90);
+    --yellow-5: oklch(60% 0.10 90);
 
     --purple-1: oklch(75% 0.12 310);
     --purple-2: oklch(70% 0.12 310);
